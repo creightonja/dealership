@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Car Dealership</title>
+</head>
+<body>
+
+  {% if searchcar is not empty %}
+  <h1>Here are your results:</h1>
+
+
+  {% for car in new_car_array %}
+    <h3>{{ searchcar.getMake }}</h3>
+    <ul>
+      <li>{{ searchcar.getPrice }}</l1>
+      <li>{{ searchcar.getMiles }}</li>
+      <li>{{ searchcar.getPicture}}</li>
+    </ul>
+  {% endfor %}
+
+  {% else %}
+
+  <h3>Your search has no results</h3>
+
+  {% endif %}
+
+</body>
+</html>
