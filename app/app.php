@@ -33,18 +33,20 @@
     $new_car_array = array();
 
     $counter = 0;
+    $searchcar = array();
+    $_SESSION['list_of_cars'] = array();
     foreach ($cars as $specific_car) {
       if ($specific_car->certainSpecs($user_price, $user_miles)) {
         $counter++;
-        $new_car_array = new Car($specific_car->getPicture(), $specific_car->getMake(),
-                    $specific_car->getMiles(), $specific_car->getPrice());
+        $new_car_array = new Car($specific_car->getMake(), $specific_car->getPrice(),
+                    $specific_car->getMiles(), $specific_car->getPicture());
         $new_car_array->save();
             };
         };
 
         $searchcar = Car::getAll();
 
-    return  $app['twig']->render('cardisplay.html.twig', array('searchcar' => $new_car_array));
+    return  $app['twig']->render('cardisplay.html.twig', array('searchcar' => $searchcar));
 
   });
 
