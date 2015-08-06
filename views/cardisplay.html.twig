@@ -4,11 +4,11 @@
 </head>
 <body>
 
-  {% if searchcar is not empty %}
+  {% if matching_cars is not empty %}
   <h1>Here are your results:</h1>
 
 
-  {% for car in searchcar %}
+  {% for car in matching_cars %}
     <h3>{{ car.getMake}}</h3>
     <ul>
       <li>Price: {{ car.getPrice }}</l1>
@@ -18,6 +18,8 @@
   {% endfor %}
 
   {% endif %}
+
+  <p>{{ addedcar.getMake }}</p>
 
 </body>
 </html>
