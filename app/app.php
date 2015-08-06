@@ -26,10 +26,10 @@
 
   //Gets the user input from add a car
   $app->post("/added", function() use ($app) {
-    $car_make = $_GET['car_make'];
-    $car_price = $_GET['car_price'];
-    $car_miles = $_GET['car_miles'];
-    $car_image = $_GET['car_image'];
+    // $car_make = $_POST['car_make'];
+    // $car_price = $_POST['car_price'];
+    // $car_miles = $_POST['car_miles'];
+    // $car_image = $_POST['car_image'];
 
     //$cars = Car::getAll();
     $newcar = array();
