@@ -71,10 +71,20 @@ class Car
     array_push($_SESSION['list_of_cars'], $this);
   }
 
+  function savecar()
+  {
+    array_push($_SESSION['added_cars'], $this);
+  }
+
   //Getter Static Method
   static function getAll()
   {
     return $_SESSION['list_of_cars'];
+  }
+
+  static function getAllCar()
+  {
+    return $_SESSION['added_cars'];
   }
 
   //Static Method - Deletes Tasks

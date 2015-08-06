@@ -11,8 +11,8 @@
   {% for car in searchcar %}
     <h3>{{ car.getMake}}</h3>
     <ul>
-      <li>{{ car.getPrice }}</l1>
-      <li>{{ car.getMiles }}</li>
+      <li>Price: {{ car.getPrice }}</l1>
+      <li>Miles: {{ car.getMiles }}</li>
       <li><img src="{{ car.getPicture}}"></li>
     </ul>
   {% endfor %}
